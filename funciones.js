@@ -26,9 +26,10 @@ function EnviarDatos()
 
 		if(respuesta=="si")
 		{
-			window.location.replace("./class/estacionamiento.php");
+
+			window.location.href="class/estacionamiento.php";
 		}else{
-			alert(respuesta);
+			alert("Error en el usuario o contraseña");
 		}
 
 	});
