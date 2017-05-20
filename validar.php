@@ -1,4 +1,5 @@
 <?php 
+
 include_once("class/usuario.php");
 if (isset($_POST["usuario"])&&isset($_POST["password"]))
 {
@@ -18,5 +19,14 @@ if (isset($_POST["usuario"])&&isset($_POST["password"]))
 		}
 	}
 	echo $rta;
+}
+
+if (isset($_POST["sesion"])) {
+
+	$_SESSION["usuario"]=NULL;
+
+	session_destroy();
+	echo "ok";
+
 }
  ?>

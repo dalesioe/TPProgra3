@@ -17,6 +17,7 @@ session_start();
 </head>
 <body><div class="container">
 <a class="btn btn-info" href="../index.html">Login</a>
+<button class="btn btn-danger" id="btn-delog" onclick="Desloguear()">Desloguear</button>
   <h2>Panel Principal</h2>
   <ul class="nav nav-tabs">
     <?php 
@@ -25,9 +26,9 @@ session_start();
     }
      ?>
     
-    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+    <li><a data-toggle="tab" href="#menu1">Ingreso</a></li>
+    <li><a data-toggle="tab" href="#menu2">Egreso</a></li>
+    
   </ul>
 
   <div class="tab-content">

@@ -29,8 +29,22 @@ function EnviarDatos()
 
 			window.location.href="class/estacionamiento.php";
 		}else{
-			alert("Error en el usuario o contraseña");
+			alert("Error de usuario o contraseña");
 		}
 
 	});
+}
+function Desloguear()
+{
+	var sesion="";
+	$.post("../validar.php",sesion,function(rta)
+	{
+		if (rta=="ok") {
+			window.location.href="../index.html";
+		}
+		else
+		{
+			alert(rta);
+		}
+	})
 }
