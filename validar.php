@@ -1,5 +1,4 @@
 <?php 
-
 include_once("class/usuario.php");
 if (isset($_POST["usuario"])&&isset($_POST["password"]))
 {
@@ -28,5 +27,11 @@ if (isset($_POST["sesion"])) {
 	session_destroy();
 	echo "ok";
 
+}
+if (isset($_POST["mostrar"]))
+{
+
+	$rta=Usuario::MostrarUsuariosDB();
+	echo $rta;
 }
  ?>

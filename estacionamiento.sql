@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2017 a las 20:15:08
+-- Tiempo de generación: 22-05-2017 a las 02:49:37
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -57,8 +57,23 @@ CREATE TABLE `registro` (
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
-  `hora_log` varchar(50) COLLATE utf8_spanish2_ci NOT NULL
+  `password` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `apellido` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `turno` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `admin` tinyint(1) NOT NULL,
+  `hora_log` text COLLATE utf8_spanish2_ci NOT NULL,
+  `suspendido` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre`, `password`, `apellido`, `turno`, `admin`, `hora_log`, `suspendido`) VALUES
+(5, 'admin', 'admin', 'admin', 'admin', 1, '', 0),
+(6, 'manana', '123', 'manana', 'manana', 0, '', 0),
+(7, 'tarde', '123', 'tarde', 'tarde', 0, '', 0),
+(8, 'noche', '123', 'noche', 'noche', 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -120,7 +135,7 @@ ALTER TABLE `registro`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `vehiculo`
 --

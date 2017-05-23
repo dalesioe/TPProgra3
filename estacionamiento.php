@@ -6,17 +6,17 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"> 
-	<link rel="stylesheet" href="../bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css"> 
-  	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" ></script>
-  <script src="../bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css"> 
+  	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" ></script>
+  <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
   <!-- <script src="validator.js"></script> -->
-  <script src="../funciones.js"></script>
+  <script src="funciones.js"></script>
     <title>Estacionamiento "El aleman loco"</title>
 </head>
 <body><div class="container">
-<a class="btn btn-info" href="../index.html">Login</a>
+<a class="btn btn-info" href="index.html">Login</a>
 <button class="btn btn-danger" id="btn-delog" onclick="Desloguear()">Desloguear</button>
   <h2>Panel Principal</h2>
   <ul class="nav nav-tabs">
@@ -32,15 +32,13 @@ session_start();
   </ul>
 
   <div class="tab-content">
-    
-      
+  
       <?php 
       if($_SESSION["admin"]==true)
       {
       	include("admin.php");
       }
        ?>
-    
     <div id="menu1" class="tab-pane fade">
       <h3>Menu 1</h3>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
