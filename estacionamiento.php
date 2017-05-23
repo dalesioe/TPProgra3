@@ -22,13 +22,19 @@ session_start();
   <ul class="nav nav-tabs">
     <?php 
     if ($_SESSION["admin"]==true) {
-    	echo "<li class='active'><a data-toggle='tab' href='#admin'>Admin</a></li>";
+    	echo "<li class='active'><a data-toggle='tab' href='#admin'>Admin</a></li>
+
+    <li><a data-toggle='tab' href='#menu1'>Ingreso</a></li>
+    <li><a data-toggle='tab' href='#menu2'>Egreso</a></li>";
+    }else
+    {
+         echo "<li class='active'><a data-toggle='tab' href='#menu1'>Ingreso</a></li>
+    <li><a data-toggle='tab' href='#menu2'>Egreso</a></li>";
+
+     
     }
-     ?>
     
-    <li><a data-toggle="tab" href="#menu1">Ingreso</a></li>
-    <li><a data-toggle="tab" href="#menu2">Egreso</a></li>
-    
+    ?>
   </ul>
 
   <div class="tab-content">
